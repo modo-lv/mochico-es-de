@@ -1,0 +1,7 @@
+<theme>
+  <view name="gamelist">
+    <text name="sys-name">
+      <size>0.28125 0.025</size>
+    </text>
+  </view>
+</theme>

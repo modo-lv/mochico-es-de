@@ -1,0 +1,18 @@
+<themeCapabilities>
+  <themeName>Mochico</themeName>
+
+  <aspectRatio>16:10</aspectRatio>
+  <aspectRatio>16:9</aspectRatio>
+
+  <transitions name="default">
+    <selectable>false</selectable>
+
+    <startupToSystem>fade</startupToSystem>
+    <startupToGamelist>fade</startupToGamelist>
+    <systemToSystem>slide</systemToSystem>
+    <systemToGamelist>slide</systemToGamelist>
+    <gamelistToGamelist>slide</gamelistToGamelist>
+    <gamelistToSystem>slide</gamelistToSystem>
+  </transitions>
+
+</themeCapabilities>

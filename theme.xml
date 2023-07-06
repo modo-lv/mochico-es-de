@@ -1,0 +1,8 @@
+<theme>
+  <include>./_inc/systems/metadata/_default.xml</include>
+  <include>./_inc/systems/metadata/${system.theme}.xml</include>
+
+  <include>./base.xml</include>
+  <include>./systems.xml</include>
+  <include>./games.xml</include>  
+</theme>

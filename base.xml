@@ -1,0 +1,70 @@
+<theme>
+  <variables>
+    <blank>./_inc/blank.png</blank>
+    <sys-hardware>./_inc/systems/hardware/${system.theme}.png</sys-hardware>
+    <sys-logo>./_inc/systems/logos/${system.theme}.png</sys-logo>
+    <sys-controller>./_inc/systems/controllers/${system.theme}.png</sys-controller>
+    <text-font>./_inc/fonts/Roboto-Light.ttf</text-font>
+    <list-font>./_inc/fonts/Roboto-Medium.ttf</list-font>
+    <menu-bar-color>222222</menu-bar-color>
+    <menu-bar-font-size>0.03</menu-bar-font-size>
+  </variables>
+  
+  <view name="system,gamelist">
+    <!-- Background color -->
+    <image name="background">
+      <origin>0 0</origin>
+      <pos>0 0</pos>
+      <size>1 1</size>
+      <path>${blank}</path>
+      <tile>true</tile>
+      <zIndex>0</zIndex>
+      <color>${systemColor}</color>
+    </image>
+    
+    <!-- The dark background for the bottom bar -->
+    <image name="menu-bar-bg">
+      <path>${blank}</path>
+      <tile>true</tile>
+      <color>${menu-bar-color}</color>
+      <origin>0 1</origin>
+      <pos>0 1</pos>
+      <size>1 0.05</size>
+    </image>
+
+    <!-- ES buttons on the bottom right -->
+    <helpsystem name="help">
+      <textColor>ffffff99</textColor>
+      <iconColor>ffffff99</iconColor>
+      <fontSize>${menu-bar-font-size}</fontSize>
+      <origin>1 0.5</origin>
+      <pos>0.99219 0.975</pos>
+    </helpsystem>
+    
+    <!-- System name on the bottom left -->
+    <text name="sys-name">
+      <color>FFFFFF99</color>
+      <horizontalAlignment>left</horizontalAlignment>
+      <verticalAlignment>center</verticalAlignment>
+      <text>${system.fullName}</text>
+      <fontSize>${menu-bar-font-size}</fontSize>
+      <letterCase>uppercase</letterCase>
+      <origin>0 0.5</origin>
+      <pos>0.00781 0.975</pos>
+    </text>
+  </view>
+  
+  <aspectRatio name="16:9">
+    <view name="system,gamelist">
+      <image name="menu-bar-bg">
+        <size>1 0.05556</size>
+      </image>
+      <text name="sys-name">
+        <pos>0.0078125 0.97222</pos>
+      </text>
+      <helpsystem name="help">
+        <pos>0.99219 0.97222</pos>
+      </helpsystem>
+    </view>
+  </aspectRatio>  
+</theme>
