@@ -1,5 +1,101 @@
 <theme>
   <view name="gamelist">
+    <image name="games-bg">
+      <path>${games-bg}</path>
+      <tile>false</tile>
+      <zIndex>1</zIndex>
+      <size>1 0.95</size>
+      <pos>0 0</pos>
+    </image>
+    
+    <image name="sys-logo">
+      <origin>0.5 0.5</origin>
+      <path>${sys-logo}</path>
+      <color>ffffff88</color>
+      <pos>0.21094 0.0875</pos>
+      <maxSize>0.29688 0.1</maxSize>
+    </image>
+    
+    <textlist name="game-list">
+      <fontPath>${list-font}</fontPath>
+      <fontSize>0.03</fontSize>
+      <selectedColor>ffffff</selectedColor>
+      <primaryColor>4f5159</primaryColor>
+      <secondaryColor>4f5159</secondaryColor>
+      <selectorColor>${systemColor}22</selectorColor>
+      
+      <horizontalMargin>0.01563</horizontalMargin>
+      <!-- Eyeballed to match row height -->
+      <lineSpacing>1.815</lineSpacing>
+      <!-- Eyeballed to match row height -->
+      <selectorHeight>0.052</selectorHeight>
+      
+      <!-- Y (0.15) needs a little eyeballed extra to match rows -->
+      <pos>0.01563 0.152</pos>
+      <size>0.39063 0.775</size>
+    </textlist>
+    
+    <image name="game-art">
+      <imageType>miximage</imageType>
+      <origin>0.5 0</origin>
+      <pos>0.69531 0.1</pos>
+      <maxSize>0.54688 0.65625</maxSize>
+    </image>
+    
+    <badges name="badges">
+      <lines>1</lines>
+      <itemsPerLine>5</itemsPerLine>
+      <badgeIconColor>222222</badgeIconColor>
+      <customBadgeIcon badge="folder">./_inc/games/badges/folder.svg</customBadgeIcon>
+      <customBadgeIcon badge="broken">./_inc/games/badges/broken.svg</customBadgeIcon>
+      <customBadgeIcon badge="completed">./_inc/games/badges/completed.svg</customBadgeIcon>
+      <customBadgeIcon badge="favorite">./_inc/games/badges/favorite.svg</customBadgeIcon>
+      <customBadgeIcon badge="kidgame">./_inc/games/badges/kidgame.svg</customBadgeIcon>
+      <customBadgeIcon badge="collection">./_inc/games/badges/collection.svg</customBadgeIcon>
+      <customBadgeIcon badge="altemulator">./_inc/games/badges/altemulator.svg</customBadgeIcon>
+      <opacity>0.5</opacity>
+      <slots>folder,favorite,completed,kidgame,broken,altemulator</slots>
+      <itemMargin>0.005 -1</itemMargin>
+      <origin>0 0.5</origin>
+      <pos>0.42188 0.82813</pos>
+      <size>0.18203 0.04375</size>
+    </badges>
+    
+    <badges name="game-pad">
+      <customBadgeIcon badge="controller">${empty}</customBadgeIcon>
+      <itemsPerLine>1</itemsPerLine>
+      <lines>1</lines>
+      <slots>controller</slots>
+      <controllerSize>1.5</controllerSize>
+      <horizontalAlignment>center</horizontalAlignment>
+      <itemMargin>0 0</itemMargin>
+      <size>0.18203 0.04375</size>
+      <origin>0.5 1</origin>
+      <pos>0.69531 0.85</pos>
+      <opacity>0.75</opacity>
+    </badges>
+    
+    <datetime name="game-year">
+      <metadata>releasedate</metadata>
+      <format>%Y</format>
+      <defaultValue>• • • •</defaultValue>
+      <horizontalAlignment>right</horizontalAlignment>
+      <verticalAlignment>center</verticalAlignment>
+      <origin>1 0.5</origin>
+      <pos>0.96875 0.82813</pos>
+      <size>0.13672 0.04375</size>
+      <opacity>0.5</opacity>
+    </datetime>
+    
+    <image name="sys-controller">
+      <path>${sys-controller}</path>
+      <origin>0.5 0.5</origin>
+      <pos>0.69531 0.475</pos>
+      <opacity>0.25</opacity>
+      <maxSize>0.48438 0.65</maxSize>
+      <zIndex>2</zIndex>
+    </image>
+    
     <text name="sys-name">
       <size>0.28125 0.025</size>
     </text>

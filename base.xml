@@ -1,13 +1,15 @@
 <theme>
   <variables>
     <blank>./_inc/blank.png</blank>
+    <empty>./_inc/empty.png</empty>
     <sys-hardware>./_inc/systems/hardware/${system.theme}.png</sys-hardware>
-    <sys-logo>./_inc/systems/logos/${system.theme}.png</sys-logo>
+    <sys-logo>./_inc/systems/logos/${system.theme}.svg</sys-logo>
     <sys-controller>./_inc/systems/controllers/${system.theme}.png</sys-controller>
     <text-font>./_inc/fonts/Roboto-Light.ttf</text-font>
     <list-font>./_inc/fonts/Roboto-Medium.ttf</list-font>
     <menu-bar-color>222222</menu-bar-color>
     <menu-bar-font-size>0.03</menu-bar-font-size>
+    <games-bg>./_inc/games/background.png</games-bg>
   </variables>
   
   <view name="system,gamelist">
