@@ -15,6 +15,14 @@
     <gamelistToSystem>slide</gamelistToSystem>
   </transitions>
   
+  <colorScheme name="light">
+    <label>Light</label>
+  </colorScheme>
+  
+  <colorScheme name="dark">
+    <label>Dark</label>
+  </colorScheme>
+  
   <variant name="miximage">
     <label>Collage (screenshot + packaging)</label>
     <selectable>true</selectable>

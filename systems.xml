@@ -8,6 +8,7 @@
       <staticImage>${sys-hardware}</staticImage>      
       <itemSize>1 1</itemSize>
       <color>00000000</color>
+      <imageColor>${image-tone}</imageColor>
       <origin>0.5 0.5</origin>
       <pos>0.5 0.5</pos>
       <size>1 0.95</size>

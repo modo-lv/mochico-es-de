@@ -1,4 +1,12 @@
 <theme>
+  <colorScheme name="dark">
+    <variables>
+      <main-bg>${systemColor}88</main-bg>
+      <games-bg>./_inc/games/dark-bg.png</games-bg>
+      <image-tone>AAAAAAFF</image-tone>
+    </variables>
+  </colorScheme>
+
   <variables>
     <blank>./_inc/blank.png</blank>
     <empty>./_inc/empty.png</empty>
@@ -7,9 +15,11 @@
     <sys-controller>./_inc/systems/controllers/${system.theme}.png</sys-controller>
     <text-font>./_inc/fonts/Roboto-Light.ttf</text-font>
     <list-font>./_inc/fonts/Roboto-Medium.ttf</list-font>
+    <main-bg>${systemColor}</main-bg>
     <menu-bar-color>222222</menu-bar-color>
     <menu-bar-font-size>0.03</menu-bar-font-size>
-    <games-bg>./_inc/games/background.png</games-bg>
+    <games-bg>./_inc/games/light-bg.png</games-bg>
+    <image-tone>FFFFFFFF</image-tone>
   </variables>
   
   <view name="system,gamelist">
@@ -21,7 +31,7 @@
       <path>${blank}</path>
       <tile>true</tile>
       <zIndex>0</zIndex>
-      <color>${systemColor}</color>
+      <color>${main-bg}</color>
     </image>
     
     <!-- The dark background for the bottom bar -->

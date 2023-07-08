@@ -40,6 +40,7 @@
       <origin>0.5 0</origin>
       <pos>0.69531 0.1</pos>
       <maxSize>0.54688 0.65625</maxSize>
+      <color>${image-tone}</color>
     </image>
     
     <badges name="badges">
