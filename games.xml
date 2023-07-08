@@ -43,8 +43,8 @@
     </image>
     
     <badges name="badges">
+      <itemsPerLine>6</itemsPerLine>
       <lines>1</lines>
-      <itemsPerLine>5</itemsPerLine>
       <badgeIconColor>222222</badgeIconColor>
       <customBadgeIcon badge="folder">./_inc/games/badges/folder.svg</customBadgeIcon>
       <customBadgeIcon badge="broken">./_inc/games/badges/broken.svg</customBadgeIcon>
@@ -99,5 +99,5 @@
     <text name="sys-name">
       <size>0.28125 0.025</size>
     </text>
-  </view>
+  </view>  
 </theme>
