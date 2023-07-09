@@ -1,4 +1,5 @@
 <theme>
+
   <colorScheme name="dark">
     <variables>
       <main-bg>${systemColor}88</main-bg>
@@ -6,7 +7,7 @@
       <image-tone>AAAAAAFF</image-tone>
     </variables>
   </colorScheme>
-
+  
   <variables>
     <blank>./_inc/blank.png</blank>
     <empty>./_inc/empty.png</empty>
@@ -22,6 +23,17 @@
     <image-tone>FFFFFFFF</image-tone>
   </variables>
   
+  <aspectRatio name="16:9">
+    <variables>
+      <games-bg>./_inc/games/light-bg_16-9.png</games-bg>
+    </variables>
+    <colorScheme name="dark">
+      <variables>
+        <games-bg>./_inc/games/dark-bg_16-9.png</games-bg>
+      </variables>
+    </colorScheme>
+  </aspectRatio>
+
   <view name="system,gamelist">
     <!-- Background color -->
     <image name="background">
@@ -65,18 +77,5 @@
       <pos>0.00781 0.975</pos>
     </text>
   </view>
-  
-  <aspectRatio name="16:9">
-    <view name="system,gamelist">
-      <image name="menu-bar-bg">
-        <size>1 0.05556</size>
-      </image>
-      <text name="sys-name">
-        <pos>0.0078125 0.97222</pos>
-      </text>
-      <helpsystem name="help">
-        <pos>0.99219 0.97222</pos>
-      </helpsystem>
-    </view>
-  </aspectRatio>  
+
 </theme>

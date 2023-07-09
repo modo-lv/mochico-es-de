@@ -30,8 +30,7 @@
       <!-- Eyeballed to match row height -->
       <selectorHeight>0.052</selectorHeight>
       
-      <!-- Y (0.15) needs a little eyeballed extra to match rows -->
-      <pos>0.01563 0.152</pos>
+      <pos>0.01563 0.15</pos>
       <size>0.39063 0.775</size>
     </textlist>
     
@@ -73,7 +72,7 @@
       <size>0.18203 0.04375</size>
       <origin>0.5 1</origin>
       <pos>0.69531 0.85</pos>
-      <opacity>0.75</opacity>
+      <opacity>0.5</opacity>
     </badges>
     
     <datetime name="game-year">
@@ -91,14 +90,26 @@
     <image name="sys-controller">
       <path>${sys-controller}</path>
       <origin>0.5 0.5</origin>
+      <zIndex>2</zIndex>
+      <color>${image-tone}</color>      
       <pos>0.69531 0.475</pos>
       <opacity>0.25</opacity>
-      <maxSize>0.48438 0.65</maxSize>
-      <zIndex>2</zIndex>
+      <maxSize>0.35938 0.61111</maxSize>
     </image>
     
     <text name="sys-name">
       <size>0.28125 0.025</size>
     </text>
-  </view>  
+  </view>
+  
+  <aspectRatio name="16:9">
+    <view name="gamelist">
+      <textlist name="game-list">
+        <!-- Y (0.15) needs a little eyeballed extra to match row start -->
+        <pos>0.01563 0.1521</pos>
+        <!-- Eyeballed to match row height -->
+        <lineSpacing>1.802</lineSpacing>
+      </textlist>
+    </view>
+  </aspectRatio>
 </theme>
