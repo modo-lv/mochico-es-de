@@ -1,0 +1,71 @@
+$screen-width: 1280px;
+$screen-height: 800px;
+$viewport-height: $screen-height - 40;
+$v-space: $screen-height / 40;
+$h-space: $screen-width / 64;
+$main-width: $screen-width - $h-space * 2;
+$main-height: $viewport-height - $v-space * 2;
+$menu-width: $screen-width / 2.56;
+$menu-height: $main-height;
+$content-width: $main-width - $menu-width + $h-space;
+$content-height: $main-height - $v-space * 4;
+$debug-border: 1px none black;
+$border-radius: min($h-space, $v-space) / 2;
+$logo-height: $screen-height / 8;
+
+body {
+  margin: 0;
+  padding: 0;
+  width: $screen-width;
+  height: $viewport-height;
+  background: transparent;
+  border: $debug-border;
+  flex-direction: row;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  padding: $h-space $v-space;
+}
+
+menu {
+  position: relative;
+  width: $menu-width;
+  height: $menu-height;
+  min-height: $menu-height;
+  max-height: $menu-height;
+  border-radius: $border-radius;
+  box-shadow: 0px 0px $h-space 1px rgba(0, 0, 0, 0.8);
+  background-color: #222;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+
+  .logo, .row {
+    box-sizing: border-box;
+    border-bottom: 2px rgba(0, 0, 0, 0.25) groove;
+  }
+  
+  .logo {
+    min-height: $logo-height;
+    max-height: $logo-height;
+  }
+  .row {
+    height: ($menu-height - $logo-height - $border-radius) / 14;
+  }
+}
+
+.content {
+  width: $content-width;
+  height: $content-height;
+  margin-left: -$h-space;
+  border-radius: $border-radius;
+  background: #EEE8E0;
+  border-left: none;
+  box-shadow: inset 0 0 ($h-space / 2) rgba(0,0,0,0.5);
+  
+  .dark & {
+    background: #777470;
+  }
+}
