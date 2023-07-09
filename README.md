@@ -1,4 +1,4 @@
-# Mochico (EmulationStation Destkop Edition theme)
+# Mochico (EmulationStation Desktop Edition theme)
 
 ## Overview
 
