@@ -1,0 +1,38 @@
+name: release-tagged-versions.yaml
+run-name: Release ${{ github.ref_name }}
+on:
+  push:
+    tags:
+    - v**
+env:
+  RELEASE_ZIP: mochico_${{ github.ref_name }}.zip
+jobs:
+  package-and-draft-release:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout ${{ github.ref_name }}
+      uses: actions/checkout@v3
+    - name: Create release dir
+      run: mkdir mochico
+    - uses: GuillaumeFalourd/setup-rsync@v1.1
+    - name: Copy files to release dir
+      run: rsync -av --exclude='_src' --exclude='*.git*' --exclude='*.bat' --exclude='mochico' ./ mochico
+    - name: Create archive
+      uses: montudor/action-zip@v1
+      with:
+        args: zip -r9 ${{ env.RELEASE_ZIP }} mochico
+    - name: Draft release
+      uses: ncipollo/release-action@v1
+      with:
+        allowUpdates: true
+        artifactErrorsFailBuild: true
+        artifacts: ${{ env.RELEASE_ZIP }}
+        draft: true
+        makeLatest: true
+        omitBody: true
+        omitDraftDuringUpdate: true
+        omitNameDuringUpdate: true
+        omitPrereleaseDuringUpdate: true
+        bodyFile: "body.md"
