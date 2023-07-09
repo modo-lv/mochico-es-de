@@ -18,7 +18,7 @@ jobs:
       run: mkdir mochico
     - uses: GuillaumeFalourd/setup-rsync@v1.1
     - name: Copy files to release dir
-      run: rsync -av --exclude='_src' --exclude='*.git*' --exclude='*.bat' --exclude='mochico' ./ mochico
+      run: rsync -av --exclude='_src' --exclude='*.git*' --exclude='*.bat' --exclude='mochico' --exclude='_meta' ./ mochico
     - name: Create archive
       uses: montudor/action-zip@v1
       with:
@@ -30,7 +30,7 @@ jobs:
         artifactErrorsFailBuild: true
         artifacts: ${{ env.RELEASE_ZIP }}
         draft: true
-        makeLatest: true
+        makeLatest: false
         omitBody: true
         omitDraftDuringUpdate: true
         omitNameDuringUpdate: true
